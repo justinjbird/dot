@@ -1,0 +1,46 @@
+## sets the environment for login shells, it contains "set it and forget it" type of parameters
+## such as update $PATH
+
+## Paths
+
+# >>> dotnet >>>
+export PATH="~/.dotnet/tools:${PATH}"
+# <<< dotnet <<<
+
+# >>> homebrew >>>
+export PATH="/opt/homebrew/bin:${PATH}"
+export PATH="/opt/homebrew/sbin:${PATH}"
+# <<< homebrew <<<
+
+# >>> python >>>
+export PATH="~/.local/bin:${PATH}"
+export PATH="/Library/Frameworks/Python.framework/Versions/3.12/bin:${PATH}"
+export PATH="~/Library/Python/3.12/lib/python/site-packages:${PATH}"
+export PATH="/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages:${PATH}"
+# <<< python <<<
+
+# >>> sqlpackage >>>
+export PATH="~/.sqlpackage:${PATH}"
+# <<< sqlpackage <<<
+
+# >>> vscode >>>
+export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:${PATH}"
+# <<< vscode <<<
+
+## SSL
+
+# >>> 1password >>>
+export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
+# <<< 1password <<<
+
+## Settings
+
+# >>> brewfile
+if [ -f $(brew --prefix)/etc/brew-wrap ];then
+  source $(brew --prefix)/etc/brew-wrap
+fi
+# <<< brewfile
+
+# >>> homebrew >>>
+eval "$(/opt/homebrew/bin/brew shellenv)"
+# <<< homebrew <<<

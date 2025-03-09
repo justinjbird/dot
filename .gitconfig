@@ -1,0 +1,42 @@
+## v001
+[core]
+  autocrlf = input
+  bare = false
+  excludesFile = ~/.gitignore-global
+  filemode = true
+  hooksPath = /Users/justin/.git/hooks
+  ignorecase = true
+  logallrefupdates = true
+  precomposeunicode = true
+  repositoryformatversion = 0
+[alias]
+  deleteMerged = "!git fetch --all -p; git branch -vv | grep ': gone]' | awk '{ print $1}' | xargs -n 1 git branch -D"
+  dot = "!git fetch; git reset --mixed origin/main"
+  logp = "log --pretty=format:'%C(yellow)%h%Creset %s %Cgreen(%cr)%Creset %C(bold blue)<%an>%Creset' --graph"
+  undo = "reset --mixed HEAD^"
+	unpushed = "!f() { \\\n    if [[ \"$1\" == \"--all\" ]]; then \\\n        if [[ \"$2\" == \"--pwsh\" ]]; then \\\n            pwsh -Command List-GitUnpushed; \\\n        elif [[ \"$2\" == \"--zsh\" ]]; then \\\n            git-check-unpushed; \\\n        else \\\n            echo \"Error: Not enough switched provided, must specify --all with --pwsh or --zsh\"; \\\n        fi; \\\n    elif [[ \"$1\" == \"--pwsh\" ]] || [[ \"$1\" == \"--zsh\" ]]; then \\\n        echo \"Error: Must specify --all with --pwsh or --zsh\"; \\\n        exit 1; \\\n    else \\\n        git log --branches --not --remotes --no-walk --decorate --oneline; \\\n    fi; \\\n}; f"
+[commit]
+	gpgsign = true
+[credential]
+	helper = osxkeychain
+	helper = 
+	helper = /usr/local/share/gcm-core/git-credential-manager
+[credential "https://dev.azure.com"]
+	useHttpPath = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	process = git-lfs filter-process
+	required = true
+	smudge = git-lfs smudge -- %f
+[gpg]
+	format = ssh
+[http]
+	postBuffer = 524288000
+[init]
+	defaultBranch = main
+[push]
+	autoSetupRemote = true
+[user]
+	email = justin@metricy.uk
+	name = Justin Bird
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICylUj97ka32baDvBPar+zOSxMiPhuLEfyFS87xvzhDN

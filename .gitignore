@@ -1,0 +1,43 @@
+*
+## root
+!.bash_profile
+!.bashrc
+!.cprofile
+!.cshrc
+!.gitconfig
+!.gitignore
+!.gitignore-global
+!.zprofile
+!.zshenv
+!.zshrc
+!README.md
+## ssh
+!.ssh
+!.ssh/config
+## multiple
+!.config
+## brewfile
+!.config/brewfile/
+!.config/brewfile/Brewfile
+!.config/brewfile/Brewfile-2025-03-09
+!.config/brewfile/Brewfile.Justin-MacBookAirM2.local
+!.config/brewfile/Brewfile.Justin-MacStudioM1.local
+## exercism
+!.config/exercism
+!.config/exercism/user.json
+## powershell
+!.config/powershell/
+!.config/powershell/profile.ps1
+!.config/powershell/Microsoft.PowerShell_profile.ps1
+## home assistant
+!.home-assistant/
+!.home-assistant/configuration.yaml
+## ohmyposh
+!.ohmyposh
+!.ohmyposh/*.json
+## vscode
+!pyrightconfig.json
+## windows powershell
+!Documents
+!Documents/WindowsPowerShell
+!Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1
