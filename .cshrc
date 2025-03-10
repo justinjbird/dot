@@ -12,7 +12,7 @@ alias docker=podman
 # <<< docker <<<
 
 # >>> dotfiles
-alias dot='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 # <<< dotfiles
 
 # >>> homebrew >>>
